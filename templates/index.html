@@ -1,0 +1,352 @@
+{% extends "base.html" %}
+
+{% block title %}Naveen Nimmala – Website Designer & Web App Developer | Guntur, AP{% endblock %}
+
+{% block content %}
+
+<!-- ════════════════════════════════════════════
+     HERO SECTION
+════════════════════════════════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-orb hero-orb--1"></div>
+  <div class="hero-orb hero-orb--2"></div>
+
+  <div class="hero-inner container">
+    <div class="hero-text" data-aos="fade-right">
+      <p class="hero-eyebrow"><span class="dot-pulse"></span> Available for Projects</p>
+      <h1 class="hero-heading">
+        I Build Websites<br>
+        That <span class="text-accent">Win Clients</span><br>
+        for Your Business
+      </h1>
+      <p class="hero-sub">
+        Professional website design &amp; web application development from Guntur, AP.
+        Python · Flask · HTML/CSS · JavaScript — delivered on time, every time.
+      </p>
+      <div class="hero-actions">
+        <a href="{{ url_for('portfolio') }}" class="btn btn-primary">See My Work</a>
+        <a href="{{ url_for('contact') }}" class="btn btn-outline">Get a Free Quote</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num" data-target="30">0</span><span>+</span><p>Projects</p></div>
+        <div class="stat"><span class="stat-num" data-target="100">0</span><span>%</span><p>On-Time Delivery</p></div>
+        <div class="stat"><span class="stat-num" data-target="5">0</span><span>+</span><p>Years Experience</p></div>
+      </div>
+    </div>
+
+    <div class="hero-visual" data-aos="fade-left">
+      <div class="hero-card">
+        <div class="hc-header">
+          <span class="hc-dot red"></span><span class="hc-dot yellow"></span><span class="hc-dot green"></span>
+          <span class="hc-title">naveen_portfolio.py</span>
+        </div>
+        <pre class="hc-code"><code><span class="c-kw">class</span> <span class="c-cls">Developer</span>:
+  <span class="c-fn">def</span> <span class="c-name">__init__</span>(self):
+    self.name    = <span class="c-str">"Naveen Nimmala"</span>
+    self.role    = <span class="c-str">"Full Stack Dev"</span>
+    self.stack   = [<span class="c-str">"Python"</span>, <span class="c-str">"Flask"</span>,
+                    <span class="c-str">"HTML/CSS"</span>, <span class="c-str">"JS"</span>]
+    self.passion = <span class="c-str">"Building businesses"</span>
+
+  <span class="c-fn">def</span> <span class="c-name">deliver</span>(self, project):
+    <span class="c-kw">return</span> <span class="c-str">"Premium Quality ✓"</span></code></pre>
+        <div class="hc-footer">
+          <span class="badge badge-green">✓ Available</span>
+          <span class="badge badge-blue">Guntur, India</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll-hint">
+    <span>Scroll to explore</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     SERVICES OVERVIEW
+════════════════════════════════════════════ -->
+<section class="section services-overview" id="services-overview">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <p class="eyebrow">What I Do</p>
+      <h2>Services Designed to <span class="text-accent">Grow Your Business</span></h2>
+      <p class="section-sub">From a simple portfolio to a full-scale web application — I handle it all.</p>
+    </div>
+
+    <div class="services-grid" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="srv-card">
+        <div class="srv-icon"><i class="fas fa-globe"></i></div>
+        <h3>Business Websites</h3>
+        <p>Conversion-focused websites that turn visitors into paying customers. Built fast, mobile-first, SEO-ready.</p>
+        <a href="{{ url_for('services') }}" class="srv-link">Learn more <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="srv-card">
+        <div class="srv-icon"><i class="fas fa-briefcase"></i></div>
+        <h3>Portfolio Websites</h3>
+        <p>Showcase your work with a stunning personal or professional portfolio that stands out to clients.</p>
+        <a href="{{ url_for('services') }}" class="srv-link">Learn more <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="srv-card srv-card--featured">
+        <div class="srv-badge">Most Popular</div>
+        <div class="srv-icon"><i class="fas fa-laptop-code"></i></div>
+        <h3>Web Applications</h3>
+        <p>Custom Python/Flask web apps — dashboards, management systems, portals — built for real workflows.</p>
+        <a href="{{ url_for('services') }}" class="srv-link">Learn more <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="srv-card">
+        <div class="srv-icon"><i class="fas fa-hospital"></i></div>
+        <h3>Hospital &amp; Clinic Websites</h3>
+        <p>Professional healthcare websites with appointment booking, doctor profiles, and patient-friendly UI.</p>
+        <a href="{{ url_for('services') }}" class="srv-link">Learn more <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="srv-card">
+        <div class="srv-icon"><i class="fas fa-shopping-cart"></i></div>
+        <h3>E-commerce Websites</h3>
+        <p>Full-featured online stores with product management, payment integration, and order tracking.</p>
+        <a href="{{ url_for('services') }}" class="srv-link">Learn more <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="srv-card">
+        <div class="srv-icon"><i class="fas fa-tools"></i></div>
+        <h3>Website Maintenance</h3>
+        <p>Keep your site fast, secure, and up-to-date. Annual plans starting at just ₹5,000/year.</p>
+        <a href="{{ url_for('services') }}" class="srv-link">Learn more <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+    </div>
+
+    <div class="section-cta" data-aos="fade-up">
+      <a href="{{ url_for('services') }}" class="btn btn-primary">View All Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     WHY CHOOSE ME
+════════════════════════════════════════════ -->
+<section class="section why-me" id="why-me">
+  <div class="container">
+    <div class="why-inner">
+      <div class="why-left" data-aos="fade-right">
+        <p class="eyebrow">Why Work With Me</p>
+        <h2>Not Just a Developer.<br>Your <span class="text-accent">Growth Partner.</span></h2>
+        <p>I combine technical expertise with business thinking. Every project I build is designed to attract clients, generate leads, and grow your revenue — not just look good.</p>
+        <a href="{{ url_for('about') }}" class="btn btn-outline">More About Me</a>
+      </div>
+
+      <div class="why-right" data-aos="fade-left">
+        <div class="why-item">
+          <div class="why-num">01</div>
+          <div>
+            <h4>Business-First Approach</h4>
+            <p>Every design decision is made to convert visitors into clients for your business.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-num">02</div>
+          <div>
+            <h4>Clean, Maintainable Code</h4>
+            <p>Professional Python/Flask code with comments — easy to scale and hand over.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-num">03</div>
+          <div>
+            <h4>Fast Delivery</h4>
+            <p>Most websites delivered within 7–14 days. No indefinite delays.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-num">04</div>
+          <div>
+            <h4>After-Delivery Support</h4>
+            <p>30 days free support after launch. I'm here when you need me.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     PORTFOLIO PREVIEW
+════════════════════════════════════════════ -->
+<section class="section portfolio-preview" id="portfolio-preview">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <p class="eyebrow">My Work</p>
+      <h2>Recent <span class="text-accent">Projects</span></h2>
+      <p class="section-sub">A glimpse of what I've built for clients and personal projects.</p>
+    </div>
+
+    <div class="portfolio-grid preview-grid" data-aos="fade-up">
+
+      <div class="port-card" data-category="webapp">
+        <div class="port-img port-img--reqtrack">
+          <div class="port-overlay">
+            <a href="{{ url_for('portfolio') }}" class="btn btn-sm btn-primary">View Details</a>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-tag">Web Application</span>
+          <h3>ReqTrack – Requirements Tracker</h3>
+          <p>Flask-based project management tool for tracking software requirements.</p>
+        </div>
+      </div>
+
+      <div class="port-card" data-category="dashboard">
+        <div class="port-img port-img--hospital">
+          <div class="port-overlay">
+            <a href="{{ url_for('portfolio') }}" class="btn btn-sm btn-primary">View Details</a>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-tag">Dashboard</span>
+          <h3>Hospital Management Dashboard</h3>
+          <p>Complete hospital admin system with patient, doctor &amp; billing management.</p>
+        </div>
+      </div>
+
+      <div class="port-card" data-category="business">
+        <div class="port-img port-img--business">
+          <div class="port-overlay">
+            <a href="{{ url_for('portfolio') }}" class="btn btn-sm btn-primary">View Details</a>
+          </div>
+        </div>
+        <div class="port-info">
+          <span class="port-tag">Business Website</span>
+          <h3>Corporate Business Website</h3>
+          <p>Modern multi-page business site with lead capture and service pages.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-cta" data-aos="fade-up">
+      <a href="{{ url_for('portfolio') }}" class="btn btn-primary">View Full Portfolio</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     TESTIMONIALS
+════════════════════════════════════════════ -->
+<section class="section testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <p class="eyebrow">Client Reviews</p>
+      <h2>What Clients <span class="text-accent">Say</span></h2>
+    </div>
+
+    <div class="testi-grid" data-aos="fade-up">
+
+      <div class="testi-card">
+        <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>"Naveen built our clinic website in just 10 days. Patients now book appointments online and our walk-ins increased by 40%. Excellent work!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">DR</div>
+          <div>
+            <strong>Dr. Rajesh Kumar</strong>
+            <span>Sri Sai Clinic, Guntur</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>"Our e-commerce store went from zero to 50 orders/month within weeks of launch. Naveen's attention to detail and speed were impressive."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">PR</div>
+          <div>
+            <strong>Priya Reddy</strong>
+            <span>Reddy Silks, Vijayawada</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>"The web application Naveen developed streamlined our entire operations. Very professional, clean code, and great post-launch support."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">SM</div>
+          <div>
+            <strong>Suresh Mohan</strong>
+            <span>Tech Solutions, Hyderabad</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     FAQ
+════════════════════════════════════════════ -->
+<section class="section faq" id="faq">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <p class="eyebrow">FAQ</p>
+      <h2>Frequently Asked <span class="text-accent">Questions</span></h2>
+    </div>
+
+    <div class="faq-list" data-aos="fade-up">
+
+      <div class="faq-item">
+        <button class="faq-q">How long does it take to build a website? <i class="fas fa-plus"></i></button>
+        <div class="faq-a"><p>A standard business website takes 7–10 days. E-commerce and custom web applications take 2–6 weeks depending on complexity.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">Do I need to provide content and images? <i class="fas fa-plus"></i></button>
+        <div class="faq-a"><p>Ideally yes — your own content performs better for SEO. However, I can help write basic content and source professional royalty-free images.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">Will my website be mobile-friendly? <i class="fas fa-plus"></i></button>
+        <div class="faq-a"><p>Absolutely. Every website I build is 100% responsive — it looks great on mobile, tablet, and desktop.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">What if I need changes after delivery? <i class="fas fa-plus"></i></button>
+        <div class="faq-a"><p>All packages include 30 days of free post-launch support. After that, you can opt for an annual maintenance plan starting at ₹5,000/year.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">Do you offer hosting and domain registration? <i class="fas fa-plus"></i></button>
+        <div class="faq-a"><p>Yes, I can help you set up hosting and domain registration. I recommend Hostinger or DigitalOcean for most projects.</p></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     CTA BANNER
+════════════════════════════════════════════ -->
+<section class="cta-banner" data-aos="fade-up">
+  <div class="container">
+    <div class="cta-banner-inner">
+      <div>
+        <h2>Ready to Build Something <span class="text-accent">Amazing?</span></h2>
+        <p>Get a free consultation and project quote within 24 hours.</p>
+      </div>
+      <div class="cta-banner-actions">
+        <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg">Get Free Quote</a>
+        <a href="https://wa.me/919177393699?text=Hi%20Naveen%2C%20I%20need%20a%20website" class="btn btn-whatsapp btn-lg" target="_blank">
+          <i class="fab fa-whatsapp"></i> WhatsApp Me
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

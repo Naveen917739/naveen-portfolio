@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta -->
+  <title>{% block title %}Naveen Nimmala – Website Designer & Web App Developer | Guntur{% endblock %}</title>
+  <meta name="description" content="{% block meta_desc %}Naveen Nimmala is a professional website designer and web application developer based in Guntur, Andhra Pradesh. Flask, Python, HTML/CSS/JS specialist.{% endblock %}" />
+  <meta name="keywords" content="website designer Guntur, web developer Andhra Pradesh, Flask developer, Python developer, portfolio website, business website design" />
+  <meta name="author" content="Naveen Nimmala" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Naveen Nimmala – Web Designer & Developer" />
+  <meta property="og:description" content="Professional website design and web application development services based in Guntur, India." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://naveennimmala.in" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://naveennimmala.in{{ request.path }}" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+
+  {% block extra_head %}{% endblock %}
+</head>
+<body data-page="{{ page }}">
+
+  <!-- ── Cursor ── -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- ── Navigation ── -->
+  <header class="nav-header" id="navHeader">
+    <nav class="nav-container">
+      <a href="{{ url_for('index') }}" class="nav-logo">
+        <span class="logo-n">N</span><span class="logo-text">aveen</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="{{ url_for('index') }}"      class="{{ 'active' if page=='home' }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}"      class="{{ 'active' if page=='about' }}">About</a></li>
+        <li><a href="{{ url_for('services') }}"   class="{{ 'active' if page=='services' }}">Services</a></li>
+        <li><a href="{{ url_for('portfolio') }}"  class="{{ 'active' if page=='portfolio' }}">Portfolio</a></li>
+        <li><a href="{{ url_for('pricing') }}"    class="{{ 'active' if page=='pricing' }}">Pricing</a></li>
+        <li><a href="{{ url_for('contact') }}"    class="nav-cta {{ 'active' if page=='contact' }}">Hire Me</a></li>
+      </ul>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ── Page Content ── -->
+  <main id="main-content">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="{{ url_for('index') }}" class="nav-logo">
+          <span class="logo-n">N</span><span class="logo-text">aveen</span>
+        </a>
+        <p>Building digital experiences that<br>drive real business results.</p>
+        <div class="footer-socials">
+          <a href="https://wa.me/919177393699?text=Hi%20Naveen%2C%20I%20need%20a%20website" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://linkedin.com/in/naveennimmala" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/Naveen917739" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="mailto:naveennimmala227@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About</a></li>
+          <li><a href="{{ url_for('services') }}">Services</a></li>
+          <li><a href="{{ url_for('portfolio') }}">Portfolio</a></li>
+          <li><a href="{{ url_for('pricing') }}">Pricing</a></li>
+          <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="{{ url_for('services') }}">Business Websites</a></li>
+          <li><a href="{{ url_for('services') }}">Portfolio Websites</a></li>
+          <li><a href="{{ url_for('services') }}">Hospital Websites</a></li>
+          <li><a href="{{ url_for('services') }}">E-commerce Websites</a></li>
+          <li><a href="{{ url_for('services') }}">Web Applications</a></li>
+          <li><a href="{{ url_for('services') }}">Maintenance</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p><i class="fas fa-map-marker-alt"></i> Guntur, Andhra Pradesh, India</p>
+        <p><i class="fas fa-envelope"></i> naveennimmala227@gmail.com</p>
+        <p><i class="fab fa-whatsapp"></i> +91 91773 93699</p>
+        <a href="https://wa.me/919177393699?text=Hi%20Naveen%2C%20I%20need%20a%20website" class="btn btn-whatsapp" target="_blank">
+          <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© {{ 2024 }} Naveen Nimmala. All rights reserved. | Crafted with <i class="fas fa-heart"></i> in Guntur</p>
+    </div>
+  </footer>
+
+  <!-- ── WhatsApp Float ── -->
+  <a href="https://wa.me/919177393699?text=Hi%20Naveen%2C%20I%20need%20a%20website" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="wa-label">Let's Talk</span>
+  </a>
+
+  <!-- ── Back to Top ── -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  {% block extra_scripts %}{% endblock %}
+</body>
+</html>

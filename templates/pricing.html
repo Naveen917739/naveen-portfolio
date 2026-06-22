@@ -1,0 +1,173 @@
+{% extends "base.html" %}
+{% block title %}Pricing – Website Design Packages | Naveen Nimmala Guntur{% endblock %}
+{% block meta_desc %}Transparent pricing for website design and web development. Basic websites from ₹10,000. Business websites from ₹25,000. Custom apps from ₹50,000.{% endblock %}
+
+{% block content %}
+
+<!-- ── Page Hero ── -->
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow" data-aos="fade-up">Transparent Pricing</p>
+    <h1 data-aos="fade-up" data-aos-delay="100">Simple, <span class="text-accent">Honest Pricing</span></h1>
+    <p data-aos="fade-up" data-aos-delay="150">No hidden fees. No surprises. Just clear packages built for your budget.</p>
+  </div>
+</section>
+
+<!-- ── Pricing Cards ── -->
+<section class="section pricing-section">
+  <div class="container">
+
+    <div class="pricing-grid" data-aos="fade-up">
+
+      <!-- Basic -->
+      <div class="pricing-card">
+        <div class="pc-header">
+          <p class="pc-name">Basic</p>
+          <div class="pc-price"><span class="pc-currency">₹</span>10,000<span class="pc-period">+</span></div>
+          <p class="pc-desc">Perfect for individuals and freelancers who need a clean online presence.</p>
+        </div>
+        <ul class="pc-features">
+          <li><i class="fas fa-check"></i> Up to 3 pages</li>
+          <li><i class="fas fa-check"></i> Mobile responsive design</li>
+          <li><i class="fas fa-check"></i> Contact form</li>
+          <li><i class="fas fa-check"></i> Basic SEO setup</li>
+          <li><i class="fas fa-check"></i> WhatsApp integration</li>
+          <li><i class="fas fa-check"></i> 30 days support</li>
+          <li class="disabled"><i class="fas fa-times"></i> Admin dashboard</li>
+          <li class="disabled"><i class="fas fa-times"></i> Database integration</li>
+          <li class="disabled"><i class="fas fa-times"></i> Custom functionality</li>
+        </ul>
+        <div class="pc-delivery">⏱ Delivery: 5–7 days</div>
+        <a href="{{ url_for('contact') }}?plan=basic" class="btn btn-outline btn-block">Get Started</a>
+      </div>
+
+      <!-- Business (Featured) -->
+      <div class="pricing-card pricing-card--featured">
+        <div class="pc-badge">Most Popular</div>
+        <div class="pc-header">
+          <p class="pc-name">Business</p>
+          <div class="pc-price"><span class="pc-currency">₹</span>25,000<span class="pc-period">+</span></div>
+          <p class="pc-desc">Full business website with lead generation, SEO, and professional design.</p>
+        </div>
+        <ul class="pc-features">
+          <li><i class="fas fa-check"></i> Up to 7 pages</li>
+          <li><i class="fas fa-check"></i> Premium responsive design</li>
+          <li><i class="fas fa-check"></i> Lead capture &amp; contact forms</li>
+          <li><i class="fas fa-check"></i> Advanced SEO optimization</li>
+          <li><i class="fas fa-check"></i> WhatsApp &amp; social integration</li>
+          <li><i class="fas fa-check"></i> Google Maps integration</li>
+          <li><i class="fas fa-check"></i> Testimonials &amp; FAQ sections</li>
+          <li><i class="fas fa-check"></i> 30 days support</li>
+          <li class="disabled"><i class="fas fa-times"></i> Custom web application</li>
+        </ul>
+        <div class="pc-delivery">⏱ Delivery: 7–14 days</div>
+        <a href="{{ url_for('contact') }}?plan=business" class="btn btn-primary btn-block">Get Started</a>
+      </div>
+
+      <!-- Custom Web App -->
+      <div class="pricing-card">
+        <div class="pc-header">
+          <p class="pc-name">Web Application</p>
+          <div class="pc-price"><span class="pc-currency">₹</span>50,000<span class="pc-period">+</span></div>
+          <p class="pc-desc">Full-stack custom web application with database, admin panel, and advanced features.</p>
+        </div>
+        <ul class="pc-features">
+          <li><i class="fas fa-check"></i> Custom UI/UX design</li>
+          <li><i class="fas fa-check"></i> Python / Flask backend</li>
+          <li><i class="fas fa-check"></i> SQL Server database</li>
+          <li><i class="fas fa-check"></i> User authentication system</li>
+          <li><i class="fas fa-check"></i> Admin dashboard</li>
+          <li><i class="fas fa-check"></i> REST API integration</li>
+          <li><i class="fas fa-check"></i> Cloud deployment</li>
+          <li><i class="fas fa-check"></i> 60 days support</li>
+          <li><i class="fas fa-check"></i> Full source code delivery</li>
+        </ul>
+        <div class="pc-delivery">⏱ Delivery: 3–8 weeks</div>
+        <a href="{{ url_for('contact') }}?plan=webapp" class="btn btn-outline btn-block">Get Started</a>
+      </div>
+
+    </div>
+
+    <!-- Maintenance Add-on -->
+    <div class="maintenance-card" data-aos="fade-up">
+      <div class="mc-left">
+        <div class="mc-icon"><i class="fas fa-shield-alt"></i></div>
+        <div>
+          <h3>Annual Maintenance Plan</h3>
+          <p>Keep your website secure, fast, and updated — year-round support with no surprises.</p>
+        </div>
+      </div>
+      <div class="mc-right">
+        <div class="mc-price">₹5,000 <span>/year</span></div>
+        <a href="{{ url_for('contact') }}?plan=maintenance" class="btn btn-outline">Add to My Plan</a>
+      </div>
+    </div>
+
+    <!-- Pricing Notes -->
+    <div class="pricing-notes" data-aos="fade-up">
+      <h4><i class="fas fa-info-circle"></i> Pricing Notes</h4>
+      <ul>
+        <li>All prices are starting prices. Final quote depends on specific requirements discussed.</li>
+        <li>Payment terms: 50% advance, 50% on delivery.</li>
+        <li>Hosting and domain costs are separate (I'll guide you to the best options).</li>
+        <li>GST applicable as per Indian tax regulations.</li>
+        <li>Emergency/rush projects may have additional charges.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Comparison Table ── -->
+<section class="section comparison-section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <p class="eyebrow">Compare</p>
+      <h2>Plan <span class="text-accent">Comparison</span></h2>
+    </div>
+
+    <div class="compare-table-wrap" data-aos="fade-up">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Basic<br><small>₹10,000+</small></th>
+            <th class="col-featured">Business<br><small>₹25,000+</small></th>
+            <th>Web App<br><small>₹50,000+</small></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Number of Pages</td><td>Up to 3</td><td class="col-featured">Up to 7</td><td>Unlimited</td></tr>
+          <tr><td>Mobile Responsive</td><td><i class="fas fa-check text-green"></i></td><td class="col-featured"><i class="fas fa-check text-green"></i></td><td><i class="fas fa-check text-green"></i></td></tr>
+          <tr><td>SEO Optimization</td><td>Basic</td><td class="col-featured">Advanced</td><td>Advanced</td></tr>
+          <tr><td>Contact / Lead Forms</td><td><i class="fas fa-check text-green"></i></td><td class="col-featured"><i class="fas fa-check text-green"></i></td><td><i class="fas fa-check text-green"></i></td></tr>
+          <tr><td>Admin Dashboard</td><td><i class="fas fa-times text-red"></i></td><td class="col-featured"><i class="fas fa-times text-red"></i></td><td><i class="fas fa-check text-green"></i></td></tr>
+          <tr><td>Database Integration</td><td><i class="fas fa-times text-red"></i></td><td class="col-featured"><i class="fas fa-times text-red"></i></td><td><i class="fas fa-check text-green"></i></td></tr>
+          <tr><td>User Authentication</td><td><i class="fas fa-times text-red"></i></td><td class="col-featured"><i class="fas fa-times text-red"></i></td><td><i class="fas fa-check text-green"></i></td></tr>
+          <tr><td>Post-Launch Support</td><td>30 days</td><td class="col-featured">30 days</td><td>60 days</td></tr>
+          <tr><td>Delivery Time</td><td>5–7 days</td><td class="col-featured">7–14 days</td><td>3–8 weeks</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-banner" data-aos="fade-up">
+  <div class="container">
+    <div class="cta-banner-inner">
+      <div>
+        <h2>Not Sure Which Plan? <span class="text-accent">Let's Talk.</span></h2>
+        <p>Get a free consultation — I'll recommend the best package for your specific needs and budget.</p>
+      </div>
+      <div class="cta-banner-actions">
+        <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg">Free Consultation</a>
+        <a href="https://wa.me/919177393699?text=Hi%20Naveen%2C%20I%20want%20to%20discuss%20pricing%20for%20my%20project" class="btn btn-whatsapp btn-lg" target="_blank">
+          <i class="fab fa-whatsapp"></i> WhatsApp Me
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

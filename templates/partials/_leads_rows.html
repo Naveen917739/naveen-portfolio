@@ -1,0 +1,26 @@
+{% for lead in leads %}
+<tr class="lead-row" data-id="{{ lead.id }}">
+  <td>
+    <div class="lead-name">{{ lead.name }}</div>
+    {% if lead.business %}<div class="lead-business">{{ lead.business }}</div>{% endif %}
+  </td>
+  <td>
+    <div class="lead-email">{{ lead.email }}</div>
+    {% if lead.phone %}<div class="lead-phone">{{ lead.phone }}</div>{% endif %}
+  </td>
+  <td><span class="lead-service">{{ lead.service_type or '—' }}</span></td>
+  <td><span class="lead-budget">{{ lead.budget or '—' }}</span></td>
+  <td><span class="lead-date">{{ lead.created_at.replace('T', ' ') }}</span></td>
+  <td>
+    <select class="status-select status-{{ lead.status|lower }}" data-id="{{ lead.id }}">
+      <option value="New"       {{ 'selected' if lead.status == 'New' }}>New</option>
+      <option value="Contacted" {{ 'selected' if lead.status == 'Contacted' }}>Contacted</option>
+      <option value="Won"       {{ 'selected' if lead.status == 'Won' }}>Won</option>
+      <option value="Lost"      {{ 'selected' if lead.status == 'Lost' }}>Lost</option>
+    </select>
+  </td>
+  <td>
+    <button class="lead-view-btn" data-id="{{ lead.id }}" title="View details"><i class="fas fa-eye"></i></button>
+  </td>
+</tr>
+{% endfor %}

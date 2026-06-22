@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lead Dashboard – Naveen Nimmala Admin</title>
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}" />
+</head>
+<body class="admin-body">
+
+  <!-- ── Admin Top Bar ── -->
+  <header class="admin-topbar">
+    <div class="admin-topbar-inner">
+      <a href="{{ url_for('index') }}" class="nav-logo">
+        <span class="logo-n">N</span><span class="logo-text">aveen</span>
+        <span class="admin-pill">Admin</span>
+      </a>
+      <div class="admin-topbar-actions">
+        <span class="admin-live-dot"><span class="dot-pulse"></span> Live</span>
+        <a href="{{ url_for('index') }}" target="_blank" class="btn btn-outline btn-sm"><i class="fas fa-external-link-alt"></i> View Site</a>
+        <a href="{{ url_for('admin_logout') }}" class="btn btn-sm btn-logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="admin-main">
+    <div class="admin-container">
+
+      <h1 class="admin-page-title">Lead Dashboard</h1>
+      <p class="admin-page-sub">Track and manage every inquiry from your website, in real time.</p>
+
+      <!-- ── Stat Cards ── -->
+      <div class="admin-stats" id="statsGrid">
+        <div class="stat-card">
+          <div class="stat-card-icon stat-icon-total"><i class="fas fa-inbox"></i></div>
+          <div><span class="stat-card-num" id="statTotal">{{ stats.total }}</span><p>Total Leads</p></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-icon stat-icon-new"><i class="fas fa-star"></i></div>
+          <div><span class="stat-card-num" id="statNew">{{ stats.new }}</span><p>New</p></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-icon stat-icon-contacted"><i class="fas fa-comment-dots"></i></div>
+          <div><span class="stat-card-num" id="statContacted">{{ stats.contacted }}</span><p>Contacted</p></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-icon stat-icon-won"><i class="fas fa-trophy"></i></div>
+          <div><span class="stat-card-num" id="statWon">{{ stats.won }}</span><p>Won</p></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-icon stat-icon-lost"><i class="fas fa-times-circle"></i></div>
+          <div><span class="stat-card-num" id="statLost">{{ stats.lost }}</span><p>Lost</p></div>
+        </div>
+      </div>
+
+      <!-- ── Filters ── -->
+      <div class="admin-toolbar">
+        <div class="admin-filters" id="statusFilters">
+          <button class="filter-btn {{ 'active' if current_status == 'All' }}" data-status="All">All</button>
+          <button class="filter-btn {{ 'active' if current_status == 'New' }}" data-status="New">New</button>
+          <button class="filter-btn {{ 'active' if current_status == 'Contacted' }}" data-status="Contacted">Contacted</button>
+          <button class="filter-btn {{ 'active' if current_status == 'Won' }}" data-status="Won">Won</button>
+          <button class="filter-btn {{ 'active' if current_status == 'Lost' }}" data-status="Lost">Lost</button>
+        </div>
+        <div class="admin-search">
+          <i class="fas fa-search"></i>
+          <input type="text" id="searchInput" placeholder="Search name, email, business..." value="{{ search }}" />
+        </div>
+      </div>
+
+      <!-- ── Leads Table ── -->
+      <div class="leads-table-wrap">
+        <table class="leads-table">
+          <thead>
+            <tr>
+              <th>Lead</th>
+              <th>Contact</th>
+              <th>Service</th>
+              <th>Budget</th>
+              <th>Received</th>
+              <th>Status</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="leadsTableBody">
+            {% include 'partials/_leads_rows.html' %}
+          </tbody>
+        </table>
+        <div class="leads-empty" id="leadsEmpty" style="{{ 'display:none' if leads else '' }}">
+          <i class="fas fa-inbox"></i>
+          <p>No leads found{{ ' for this filter' if current_status != 'All' or search }}.</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ── Lead Detail Modal ── -->
+  <div class="modal-overlay" id="leadModal">
+    <div class="modal-box admin-modal-box">
+      <button class="modal-close" id="leadModalClose" aria-label="Close">&times;</button>
+      <div class="modal-body" id="leadModalBody">
+        <!-- Filled by JS -->
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/admin.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+{% extends "base.html" %}
+{% block title %}Web Design & Development Services – Naveen Nimmala | Guntur{% endblock %}
+{% block meta_desc %}Professional website design and web application development services in Guntur, AP. Business websites, hospital sites, e-commerce, Flask apps and more.{% endblock %}
+
+{% block content %}
+
+<!-- ── Page Hero ── -->
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow" data-aos="fade-up">What I Offer</p>
+    <h1 data-aos="fade-up" data-aos-delay="100">Services That <span class="text-accent">Drive Results</span></h1>
+    <p data-aos="fade-up" data-aos-delay="150">Every service is designed with one goal — to grow your business online.</p>
+  </div>
+</section>
+
+<!-- ── Services Detail ── -->
+<section class="section services-detail">
+  <div class="container">
+
+    <div class="srv-detail-card" data-aos="fade-up">
+      <div class="sdc-icon"><i class="fas fa-globe"></i></div>
+      <div class="sdc-body">
+        <span class="sdc-tag">Most Requested</span>
+        <h2>Business Websites</h2>
+        <p>A professional business website is your most powerful sales tool. I build clean, fast, mobile-first websites that position your business as an authority and convert visitors into clients.</p>
+        <ul class="sdc-features">
+          <li><i class="fas fa-check-circle"></i> Multi-page layout (Home, About, Services, Contact)</li>
+          <li><i class="fas fa-check-circle"></i> SEO-optimized structure and meta tags</li>
+          <li><i class="fas fa-check-circle"></i> Lead generation contact forms</li>
+          <li><i class="fas fa-check-circle"></i> WhatsApp &amp; social media integration</li>
+          <li><i class="fas fa-check-circle"></i> Google Maps integration</li>
+          <li><i class="fas fa-check-circle"></i> Mobile responsive on all devices</li>
+        </ul>
+        <div class="sdc-price">Starting at <strong>₹25,000</strong></div>
+        <a href="{{ url_for('contact') }}" class="btn btn-primary">Get a Quote</a>
+      </div>
+    </div>
+
+    <div class="srv-detail-card" data-aos="fade-up">
+      <div class="sdc-icon"><i class="fas fa-user-tie"></i></div>
+      <div class="sdc-body">
+        <h2>Portfolio Websites</h2>
+        <p>Stand out from the competition with a portfolio that showcases your work, skills, and personality. Perfect for freelancers, photographers, designers, and professionals.</p>
+        <ul class="sdc-features">
+          <li><i class="fas fa-check-circle"></i> Custom design matching your personal brand</li>
+          <li><i class="fas fa-check-circle"></i> Project/work showcase gallery</li>
+          <li><i class="fas fa-check-circle"></i> Skills and experience section</li>
+          <li><i class="fas fa-check-circle"></i> Contact and inquiry form</li>
+          <li><i class="fas fa-check-circle"></i> Blog section (optional)</li>
+        </ul>
+        <div class="sdc-price">Starting at <strong>₹10,000</strong></div>
+        <a href="{{ url_for('contact') }}" class="btn btn-primary">Get a Quote</a>
+      </div>
+    </div>
+
+    <div class="srv-detail-card" data-aos="fade-up">
+      <div class="sdc-icon"><i class="fas fa-hospital"></i></div>
+      <div class="sdc-body">
+        <h2>Hospital &amp; Clinic Websites</h2>
+        <p>Build trust with patients before they even walk in. I build professional healthcare websites that make it easy for patients to find you, learn about your services, and book appointments.</p>
+        <ul class="sdc-features">
+          <li><i class="fas fa-check-circle"></i> Doctor profiles and specializations</li>
+          <li><i class="fas fa-check-circle"></i> Online appointment booking form</li>
+          <li><i class="fas fa-check-circle"></i> Services / treatments page</li>
+          <li><i class="fas fa-check-circle"></i> Emergency contact information</li>
+          <li><i class="fas fa-check-circle"></i> Google Maps with clinic location</li>
+          <li><i class="fas fa-check-circle"></i> Patient testimonials section</li>
+        </ul>
+        <div class="sdc-price">Starting at <strong>₹20,000</strong></div>
+        <a href="{{ url_for('contact') }}" class="btn btn-primary">Get a Quote</a>
+      </div>
+    </div>
+
+    <div class="srv-detail-card" data-aos="fade-up">
+      <div class="sdc-icon"><i class="fas fa-shopping-bag"></i></div>
+      <div class="sdc-body">
+        <h2>E-commerce Websites</h2>
+        <p>Sell your products online 24/7. I build complete online stores with product management, secure payments, and a smooth shopping experience that turns browsers into buyers.</p>
+        <ul class="sdc-features">
+          <li><i class="fas fa-check-circle"></i> Product catalog with categories and filters</li>
+          <li><i class="fas fa-check-circle"></i> Shopping cart and checkout</li>
+          <li><i class="fas fa-check-circle"></i> Payment gateway integration (Razorpay/PayTM)</li>
+          <li><i class="fas fa-check-circle"></i> Order management dashboard</li>
+          <li><i class="fas fa-check-circle"></i> Customer accounts and order history</li>
+          <li><i class="fas fa-check-circle"></i> Inventory management</li>
+        </ul>
+        <div class="sdc-price">Starting at <strong>₹35,000</strong></div>
+        <a href="{{ url_for('contact') }}" class="btn btn-primary">Get a Quote</a>
+      </div>
+    </div>
+
+    <div class="srv-detail-card srv-detail-card--featured" data-aos="fade-up">
+      <div class="sdc-icon"><i class="fas fa-laptop-code"></i></div>
+      <div class="sdc-body">
+        <span class="sdc-tag">Premium Service</span>
+        <h2>Custom Web Applications</h2>
+        <p>Need more than a website? I build full-stack web applications using Python and Flask — management systems, dashboards, portals, and automation tools tailored to your exact workflow.</p>
+        <ul class="sdc-features">
+          <li><i class="fas fa-check-circle"></i> User authentication and role-based access</li>
+          <li><i class="fas fa-check-circle"></i> Admin dashboard with reports and analytics</li>
+          <li><i class="fas fa-check-circle"></i> Database design and management (SQL Server)</li>
+          <li><i class="fas fa-check-circle"></i> REST API development</li>
+          <li><i class="fas fa-check-circle"></i> Third-party API integrations</li>
+          <li><i class="fas fa-check-circle"></i> Deployment on cloud (DigitalOcean / Hostinger)</li>
+        </ul>
+        <div class="sdc-price">Starting at <strong>₹50,000</strong></div>
+        <a href="{{ url_for('contact') }}" class="btn btn-primary">Get a Quote</a>
+      </div>
+    </div>
+
+    <div class="srv-detail-card" data-aos="fade-up">
+      <div class="sdc-icon"><i class="fas fa-tools"></i></div>
+      <div class="sdc-body">
+        <h2>Website Maintenance</h2>
+        <p>Keep your website fast, secure, and up-to-date without the hassle. I handle all the technical stuff so you can focus on your business.</p>
+        <ul class="sdc-features">
+          <li><i class="fas fa-check-circle"></i> Monthly software and security updates</li>
+          <li><i class="fas fa-check-circle"></i> Regular backups (weekly)</li>
+          <li><i class="fas fa-check-circle"></i> Performance monitoring and optimization</li>
+          <li><i class="fas fa-check-circle"></i> Content updates (up to 5 pages/month)</li>
+          <li><i class="fas fa-check-circle"></i> Bug fixes and minor changes</li>
+          <li><i class="fas fa-check-circle"></i> Priority support via WhatsApp</li>
+        </ul>
+        <div class="sdc-price"><strong>₹5,000/year</strong></div>
+        <a href="{{ url_for('contact') }}" class="btn btn-primary">Get Started</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Process ── -->
+<section class="section process-section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <p class="eyebrow">How It Works</p>
+      <h2>My <span class="text-accent">Process</span></h2>
+    </div>
+
+    <div class="process-steps" data-aos="fade-up">
+      <div class="process-step">
+        <div class="ps-num">1</div>
+        <div class="ps-icon"><i class="fas fa-comments"></i></div>
+        <h4>Discovery Call</h4>
+        <p>We discuss your business, goals, target audience, and project requirements via WhatsApp or call.</p>
+      </div>
+      <div class="process-connector"></div>
+      <div class="process-step">
+        <div class="ps-num">2</div>
+        <div class="ps-icon"><i class="fas fa-file-alt"></i></div>
+        <h4>Proposal & Quote</h4>
+        <p>I send you a detailed project proposal with timeline, deliverables, and transparent pricing.</p>
+      </div>
+      <div class="process-connector"></div>
+      <div class="process-step">
+        <div class="ps-num">3</div>
+        <div class="ps-icon"><i class="fas fa-paint-brush"></i></div>
+        <h4>Design & Build</h4>
+        <p>I design and develop your website with regular check-ins and your feedback at every stage.</p>
+      </div>
+      <div class="process-connector"></div>
+      <div class="process-step">
+        <div class="ps-num">4</div>
+        <div class="ps-icon"><i class="fas fa-rocket"></i></div>
+        <h4>Launch & Support</h4>
+        <p>Your site goes live. I provide 30 days of free support and optional ongoing maintenance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
