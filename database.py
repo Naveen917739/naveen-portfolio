@@ -47,7 +47,6 @@ SQLITE_PATH = os.environ.get('SQLITE_PATH', 'portfolio.db')
 # ─── Connection Helpers ────────────────────────────────────────────────
 @contextmanager
 def _pg_conn():
-    print("DATABASE_URL =", DATABASE_URL)
     conn = psycopg2.connect(DATABASE_URL)
     try:
         yield conn
