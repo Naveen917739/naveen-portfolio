@@ -192,7 +192,11 @@ def get_all_inquiries(status_filter=None, search=None):
                 p += [f'%{search}%'] * 3
             q += " ORDER BY created_at DESC"
             cur.execute(q, p)
-            return [_row_to_dict(r, cur) for r in cur.fetchall()]
+            rows=cur.fetchall()
+            print("Rows FOUND = ",len(rows))
+            print("Query =",q)
+            print("PARAMS=",p)
+            RETURN[_row_to_dict(r,cur) for r in rows]
     elif MODE == 'sqlite':
         with _sqlite_conn() as conn:
             q = "SELECT * FROM inquiries WHERE 1=1"
