@@ -185,7 +185,8 @@ def get_all_inquiries(status_filter=None, search=None):
             cur = conn.cursor()
             q = "SELECT * FROM inquiries WHERE 1=1"
             p = []
-            if status_filter and status_filter != 'ALL' :
+            print("STATUS_FILTER =", repr(status_filter))
+            if status_filter and status_filter != 'All' :
                 q += " AND status=%s"; p.append(status_filter)
             if search:
                 q += " AND (name ILIKE %s OR email ILIKE %s OR business ILIKE %s)"
@@ -196,12 +197,13 @@ def get_all_inquiries(status_filter=None, search=None):
             print("Rows FOUND = ",len(rows))
             print("Query =",q)
             print("PARAMS=",p)
-            RETURN[_row_to_dict(r,cur) for r in rows]
+            return[_row_to_dict(r,cur) for r in rows]
     elif MODE == 'sqlite':
         with _sqlite_conn() as conn:
             q = "SELECT * FROM inquiries WHERE 1=1"
             p = []
-            if status_filter and status_filter != 'ALL':
+            print("STATUS_FILTER =", repr(status_filter))
+            if status_filter and status_filter != 'All':
                 q += " AND status=?"; p.append(status_filter)
             if search:
                 q += " AND (name LIKE ? OR email LIKE ? OR business LIKE ?)"
@@ -213,7 +215,8 @@ def get_all_inquiries(status_filter=None, search=None):
             cur = conn.cursor()
             q = "SELECT * FROM inquiries WHERE 1=1"
             p = []
-            if status_filter and status_filter != 'ALL':
+            print("STATUS_FILTER =", repr(status_filter))
+            if status_filter and status_filter != 'All':
                 q += " AND status=?"; p.append(status_filter)
             if search:
                 q += " AND (name LIKE ? OR email LIKE ? OR business LIKE ?)"
